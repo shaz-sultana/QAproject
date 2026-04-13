@@ -1,0 +1,45 @@
+### Test 1 - Get all tasks
+GET http://localhost:5000/api/tasks
+Content-Type: application/json
+
+###
+
+### Test 2 - Create a new task
+POST http://localhost:5000/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Test Task from VS Code",
+  "description": "Testing from api-tests.http",
+  "priority": 2
+}
+
+###
+
+### Test 3 - Get task by ID
+GET http://localhost:5000/api/tasks/1
+Content-Type: application/json
+
+###
+
+### Test 4 - Get task that does NOT exist
+GET http://localhost:5000/api/tasks/9999
+Content-Type: application/json
+
+###
+
+### Test 5 - Update a task
+PUT http://localhost:5000/api/tasks/1
+Content-Type: application/json
+
+{
+  "title": "Updated Task Title",
+  "isCompleted": true,
+  "priority": 3
+}
+
+###
+
+### Test 6 - Delete a task
+DELETE http://localhost:5000/api/tasks/3
+Content-Type: application/json
